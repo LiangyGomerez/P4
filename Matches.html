@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Women's Rugby Web</title>
+	<link rel="shortcut icon" href="pictures/Rugby.Ball.Logo.png">
+	<link rel="stylesheet" href="styles/Matches.css">
+</head>
+
+<body>
+	<header>
+		<img src="pictures/Rugby.Ball.Logo.png" alt="Rugby.Logo" height="80">
+		<h2>Women's Rugby InfoSite</h2>
+		<h3>Empowering women through rugby education</h3>
+	</header>
+<nav id="nav_menu">
+    <ul>
+        <li><a href="RugbyP4 .html">Home</a></li>
+        <li><a href="Matches.html" class="current">Matches</a></li>
+		<li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Contacting.html">Contacts</a></li>
+        <li><a href="Teams.html"> Teams</a>
+            <ul>
+                <li><a href="HS.html">High School</a></li>
+                <li><a href="#">NCAA athletes</a></li>
+                <li><a href="#">Professional</a></li>
+                <li><a href="#">Clubs</a></li>
+            	</ul>
+        	</li>
+    	</ul>
+</nav>
+<div class="main-container">
+<div class="countdown-wrapper">
+    <h2>Countdown to Next Game</h2><br>
+    <div class="countdown-box">
+            <div class="team-container">
+                <img src="pictures/lion.logo.webp" alt="Team 1 Logo" class="team-image">
+            </div>
+            
+            <div class="vs-container">VS</div>
+            
+            <div class="team-container">
+                <img src="pictures/Falcon.Logo.webp" alt="Team 2 Logo" class="team-image">
+            </div>
+            
+            <div class="game-info">
+                <span id="game-date"></span>
+            </div>
+            
+            <div class="game-info countdown">
+                <span id="countdown-timer"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="latest-news-container">
+    <h2 class="latest-news-title">LATEST NEWS</h2>
+    <p class="latest-news-description">
+        Meet Sarah Daniels, the rising star of women’s rugby! In last weekend's thrilling match, 
+        Sarah led her team to victory with a last-minute try, showcasing her incredible speed and 
+        agility. Her dedication to the sport and her team’s success is an inspiration to young athletes 
+        everywhere.</p>
+    <div class="news-image">
+        <img src="pictures/Ella.png" alt="Latest News Image"><br>
+    </div>
+</div>
+
+<div class="BigPicture">
+    <img src="pictures/tackle.png" alt="Tackle">
+</div>
+
+</div>
+
+    <script>
+        
+        const gameDate = new Date("December 15, 2024 15:00:00").getTime(); 
+        const gameDateElement = document.getElementById("game-date");
+        const countdownTimerElement = document.getElementById("countdown-timer");
+
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        gameDateElement.textContent = new Date(gameDate).toLocaleDateString(undefined, options);
+
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = gameDate - now;
+
+            if (timeLeft < 0) {
+                clearInterval(interval);
+                countdownTimerElement.textContent = "Game has started!";
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            countdownTimerElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }, 1000);
+    </script>
+
+<footer>
+	<p>&copy; Liangy Gomerez 2024 | <u>Terms & Services </u> |  <u> Privacy Policy</u></p>
+</footer>
+</body>
+</html>
+
+<!-- DEVELOPER:Liangy Gomerez, IS117-001, Fall 2024 ->

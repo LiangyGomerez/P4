@@ -1,0 +1,249 @@
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+html {
+	background-color:  #f0f4f8;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 1000px;
+    margin: 0 auto;
+    border: 3px solid #004080;
+    background-color: #e6f7ff;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #004080; 
+	background-image: linear-gradient(
+	    30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+	background-image: -moz-linear-gradient(	
+		30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+	background-image: -webkit-linear-gradient(
+		30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+	background-image: linear-gradient(
+		30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+}
+
+header h2 {
+	font-size: 175%;
+	color: #002d62;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 30px;
+}
+
+/* the styles for the navigation menu */
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+    z-index: 4;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul li a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+}
+#nav_menu a.current {
+	color: yellow;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Countdown Wrapper */
+.countdown-wrapper {
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    background-color: #ffffff;
+    border: 4px solid #ffa500; 
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Countdown Box */
+.countdown-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Team Images */
+.team-container {
+    flex: 1 1 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.team-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.vs-container {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Game Info */
+.game-info {
+    flex: 1 1 200px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.countdown {
+    color: #e63946; 
+}
+
+/* Latest News Container */
+.latest-news-container {
+    position: absolute; 
+    top: 200px; 
+    right: 250px; 
+    background-color: #ffffff;
+    border: 2px solid #002d62;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.latest-news-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #002d62;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.latest-news-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.news-image {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+}
+
+/* Container */
+.BigPicture {
+    width: 650px; 
+    height: 350px; 
+    background-color: transparent; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;
+    position: absolute; 
+    top: 460px; 
+    left: 37%; 
+    transform: translateX(-50%); 
+}
+
+.BigPicture img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: cover; 
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+	background-color: #004080;
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+
+/*DEVELOPER: Liangy Gomerez, IS117-001, Fall 2024*/

@@ -1,0 +1,224 @@
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+html {
+	background-color:  #f0f4f8;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 1000px;
+    margin: 0 auto;
+    border: 3px solid #004080;
+    background-color: #e6f7ff;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #004080; 
+	background-image: linear-gradient(
+	    30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+	background-image: -moz-linear-gradient(	
+		30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+	background-image: -webkit-linear-gradient(
+		30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+	background-image: linear-gradient(
+		30deg, #5dade2 0%, #5dade2 30%, white 50%, #5dade2 80%, #5dade2 100%);
+}
+
+header h2 {
+	font-size: 175%;
+	color: #002d62;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 30px;
+}
+
+/* the styles for the navigation menu */
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul li a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+}
+#nav_menu a.current {
+	color: yellow;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* Slider */
+.container {
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+    position: absolute;
+	bottom: 200px;
+    left: 10%; 
+    width: 40%; 
+    max-width: 25rem; 
+    height: auto;
+    transform: translateY(-50%); 
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.30);
+    border-radius: 0.5rem;
+}
+
+/* Slider Images */
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+/* the styles for the section */
+section {
+	width: 400px;
+	float: right;
+	padding: 0 20px 20px 20px;
+}
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: #004080;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* Content Section */
+.content-section {
+	position: absolute; 
+	background-color: #f9f9f9; 
+	border: 2px solid #ffa500;
+	border-radius: 8px; 
+	padding: 20px;
+	width: 70%; 
+	max-width: 450px; 
+	bottom: 10px; 
+	left: 7%; 
+	text-align: left; 
+  }
+  
+  
+  
+/* Upcoming Matches Section */
+.upcoming {
+    text-align: right;
+	margin-right: 20px;
+  }
+
+.upcoming h2 {
+    margin-bottom: 10px;
+  }
+
+.match {
+    display: flex;
+    align-items: center;
+	justify-content: flex-end;
+    margin-bottom: 15px;
+  }
+
+.match img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+
+.match .date {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+  }
+
+
+.match-info {
+    margin-left: 20px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+  }
+
+/* the styles for the footer */
+footer {
+	background-color: #004080;
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+
+/*DEVELOPER: Liangy Gomerez, IS117-001, Fall 2024*/
